@@ -1,0 +1,27 @@
+{
+  "id": "nodebb-plugin-dingtalk-auth",
+  "name": "NodeBB dingtalk",
+  "description": "NodeBB Plugin that allows users to login/register via their dingtalk account.",
+  "main": "./library.js",
+  "hooks": [
+    { "hook": "static:app.load", "method": "init" },
+    { "hook": "filter:auth.init", "method": "getStrategy" },
+		{ "hook": "filter:auth.list", "method": "getAssociation" },
+    { "hook": "filter:admin.header.build", "method": "addMenuItem" },
+    { "hook": "filter:user.delete", "method": "deleteUserData" },
+		{ "hook": "filter:user.whitelistFields", "method": "appendUserHashWhitelist" },
+		{ "hook": "action:topic.changeOwner", "method": "topicChangeOwner" },
+		{ "hook": "action:post.changeOwner", "method": "postChangeOwner" }
+  ],
+  "staticDirs": {
+      "static": "./static"
+  },
+  "scss": [
+    "./static/scss/style.scss"
+  ],
+	"modules": {
+    "../admin/plugins/dingtalk-auth": "./static/lib/admin.js"
+	},
+  "templates": "./static/templates",
+	"languages": "./static/languages"
+}

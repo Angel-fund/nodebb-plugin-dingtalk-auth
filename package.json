@@ -1,0 +1,44 @@
+{
+  "name": "nodebb-plugin-dingtalk-auth",
+  "version": "0.1.1",
+  "description": "NodeBB 钉钉扫码登录",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Angel-fund/nodebb-plugin-dingtalk-auth"
+  },
+  "main": "library.js",
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "oauth",
+    "registration",
+    "dingtalk qr login"
+  ],
+  "author": {
+    "name": "osmen",
+    "email": "lijiguan1@gmail.com"
+  },
+  "license": "MIT",
+  "readme": "",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "passport": "^0.3.0",
+    "passport-oauth": "^1.0.0",
+    "passport-strategy": "^1.0.0",
+    "querystring": "^0.2.0",
+    "xtend": "^4.0.0"
+  },
+  "nbbpm": {
+    "compatibility": "^3.2.0"
+  },
+  "devDependencies": {
+    "debug": "latest",
+    "eslint": "^4.12.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
